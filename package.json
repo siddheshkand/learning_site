@@ -1,0 +1,14 @@
+{
+  "name": "learning_site_sass",
+  "version": "1.0.0",
+  "description": "Sass for django",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass --watch=assets/sass/* assets/sass/main.scss assets/css/style.css -w"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.3"
+  },
+  "author": "oxvsys",
+  "license": "MIT"
+}

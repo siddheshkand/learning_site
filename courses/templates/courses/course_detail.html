@@ -1,0 +1,38 @@
+{% load staticfiles %}
+<html>
+<head>
+    <title>
+        Course : {{ course.title }}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<!--
+<span>{{ course.pk }}<br></span>
+<h1>{{ course.title }}</h1>
+<p>{{ course.description }}</p>
+<p>{{ course.created_at|date:"D, d F, Y" }}</p>
+<ol>
+
+    {% for step in course.step_set.all %}
+        <li>{{ step }}</li>
+    {% endfor %}
+</ol>
+-->
+
+<article>
+    <h2>{{ course.title }}</h2>
+    {{ course.description }}
+
+    <section>
+        {% for step in course.step_set.all %}
+            <h3>
+                <a href="{% url 'courses:step' course_pk=step.course.pk step_pk=step.pk %}">{{ step.title }}</a>
+            </h3>
+            {{ step.description }}
+        {% endfor %}
+    </section>
+</article>
+</body>
+</html>
