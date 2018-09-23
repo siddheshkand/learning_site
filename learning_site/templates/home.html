@@ -1,0 +1,13 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>THE PYTHON SITE</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+THE PYTHON SITE <br>
+<a href="{% url 'courses:list' %}">See Courses</a>
+</body>
+</html>

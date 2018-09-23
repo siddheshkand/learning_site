@@ -8,8 +8,9 @@
 </head>
 <body>
 {% for course in courses %}
-    <h1>{{ course.title }}</h1>
+    <h1><a href="{% url 'courses:detail' pk=course.pk %}">{{ course.title }}</a></h1>
     <h2>{{ course.description }}</h2>
+
 {% endfor %}
 
 </body>

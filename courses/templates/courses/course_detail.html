@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>
-        Course : {{ course.title }}
+        {{ course.title }}
     </title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
@@ -20,6 +20,9 @@
     {% endfor %}
 </ol>
 -->
+<nav>
+    <a href="{% url 'courses:list' %}">Home : Courses</a>
+</nav>
 
 <article>
     <h2>{{ course.title }}</h2>
